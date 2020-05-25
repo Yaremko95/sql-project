@@ -65,4 +65,40 @@ codePlan VARCHAR (6)     CONSTRAINT fk_studyPlan          REFERENCES studyPlan
             title VARCHAR(50),
             credits NUMBER(2) 
             );
-        
+    
+    --create triggers for primary keys
+    CREATE SEQUENCE dni_auto_id start with 1;
+    CREATE OR REPLACE TRIGGER add_auto_to_dni BEFORE INSERT ON student FOR EACH ROW  BEGIN  SELECT 'st_' || dni_auto_id.NEXTVAL INTO :NEW.dni FROM dual; END; 
+
+     CREATE SEQUENCE code_auto_id start with 1;
+    CREATE OR REPLACE TRIGGER add_auto_to_code BEFORE INSERT ON st_group FOR EACH ROW  BEGIN  SELECT 'gr_' || code_auto_id.NEXTVAL INTO :NEW.code FROM dual; END;
+
+    CREATE SEQUENCE sub_code_auto start with 1;
+    CREATE OR REPLACE TRIGGER aad_auto_to_sub_code 
+        BEFORE INSERT ON subject FOR EACH ROW BEGIN 
+        SELECT 'sub_' || sub_code_auto.NEXTVAL INTO :NEW.code FROM dual;
+        END;
+
+    CREATE SEQUENCE dep_code_auto start with 1;
+    CREATE OR REPLACE TRIGGER add_auto_to_dep_code 
+        BEFORE INSERT ON department FOR EACH ROW BEGIN 
+        SELECT 'dep_' || dep_code_auto.NEXTVAL INTO :NEW.code FROM dual;
+        END;
+
+    CREATE SEQUENCE deanary_code_auto start with 1;
+    CREATE OR REPLACE TRIGGER add_auto_to_deanary_code 
+        BEFORE INSERT ON deanary FOR EACH ROW BEGIN 
+        SELECT 'dean_' || deanary_code_auto.NEXTVAL INTO :NEW.code FROM dual;
+        END;
+
+    CREATE SEQUENCE speciality_code_auto start with 1;
+    CREATE OR REPLACE TRIGGER add_auto_to_speciality_code 
+        BEFORE INSERT ON speciality FOR EACH ROW BEGIN 
+        SELECT 'spec_' || speciality_code_auto.NEXTVAL INTO :NEW.code FROM dual;
+        END;
+
+    CREATE SEQUENCE study_plan_code_auto start with 1;
+    CREATE OR REPLACE TRIGGER add_auto_to_study_plan_code
+        BEFORE INSERT ON studyPlan FOR EACH ROW BEGIN 
+        SELECT 'pl_' || study_plan_code_auto.NEXTVAL INTO :NEW.code FROM dual;
+        END;
