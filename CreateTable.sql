@@ -25,7 +25,15 @@ codeSpe  VARCHAR (6)     CONSTRAINT fk_speciality         REFERENCES speciality,
 codePlan VARCHAR (6)     CONSTRAINT fk_studyPlan          REFERENCES studyPlan
 <<<<<<< Updated upstream
 );
+<<<<<<< Updated upstream
 =======
+=======
+
+CREATE TABLE subject_student (
+codeSub   VARCHAR(6) ,
+dniStud   VARCHAR(6),
+grade     NUMBER(2,1) 
+>>>>>>> Stashed changes
 );
 
  CREATE TABLE subject_student (
