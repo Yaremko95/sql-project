@@ -41,7 +41,7 @@ INSERT INTO sesion VALUES ( '333', 'A05', 45, '10-03-2011');
 INSERT INTO sesion VALUES ( '444', 'C10', 75, '10-03-2011');
 INSERT INTO sesion VALUES ( '333', 'A05', 39, '17-03-2011');
 INSERT INTO sesion VALUES ( '444', 'C10', 75, '17-03-2011');
-
+-- //vvvv
 /*  
     DROP TABLE sesion;
     DROP TABLE training;
