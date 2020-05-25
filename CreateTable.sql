@@ -1,3 +1,4 @@
+
 CREATE TABLE department (
 code     VARCHAR (6)     CONSTRAINT pk_department         PRIMARY KEY,
 nameDp   VARCHAR (50)    CONSTRAINT nn_nameDp_depatment   NOT NULL
