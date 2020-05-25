@@ -26,10 +26,36 @@ INSERT INTO speciality  VALUES ( NULL, 'd_2','Distributed systems');
     /*Security deanary*/
 INSERT INTO speciality  VALUES ( NULL, 'd_3','Security');
 INSERT INTO speciality  VALUES ( NULL, 'd_3' ,'Networking and wireless communication');
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 
 /*Study Plan*/
 INSERT INTO studyPlan VALUES ( );
+=======
+
+/*StudyPlan*/
+    /*Software deanary*/
+        /*Graphics and human-computer interaction*/
+INSERT INTO studyPlan VALUES ( NULL );
+INSERT INTO studyPlan VALUES ( NULL );
+        /*Programming*/
+INSERT INTO studyPlan VALUES ( NULL );
+INSERT INTO studyPlan VALUES ( NULL );
+    /*Hardware deanary*/
+        /*Computer architecture*/
+INSERT INTO studyPlan VALUES ( NULL );
+INSERT INTO studyPlan VALUES ( NULL );
+        /*Distributed systems*/
+INSERT INTO studyPlan VALUES ( NULL );
+INSERT INTO studyPlan VALUES ( NULL );
+    /*Security deanary*/
+        /*Security*/
+INSERT INTO studyPlan VALUES ( NULL );
+INSERT INTO studyPlan VALUES ( NULL );
+        /*Networking and wireless communication*/
+INSERT INTO studyPlan VALUES ( NULL );
+INSERT INTO studyPlan VALUES ( NULL );
+>>>>>>> Stashed changes
 
 /*SpecialityPlan*/
 <<<<<<< Updated upstream
