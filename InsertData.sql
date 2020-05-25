@@ -1,10 +1,12 @@
 /*department*/
 INSERT INTO department VALUES (NULL ,'Computer Science and Technology');
 
+
 /*Deanary*/
 INSERT INTO deanary  VALUES (NULL , 'dep_1' ,'Software engineering');
 INSERT INTO deanary  VALUES (NULL ,'dep_1' ,'Hardware engineering');
 INSERT INTO deanary  VALUES (NULL ,'dep_1' ,'Computer security');
+
 
 /*Speciality*/
     /*Software deanary*/
@@ -16,6 +18,8 @@ INSERT INTO speciality  VALUES ( NULL, 'd_2','Distributed systems');
     /*Security deanary*/
 INSERT INTO speciality  VALUES ( NULL, 'd_3','Security');
 INSERT INTO speciality  VALUES ( NULL, 'd_3' ,'Networking and wireless communication');
+
+
 /*StudyPlan*/
     /*Software deanary*/
         /*Graphics and human-computer interaction*/
@@ -38,6 +42,7 @@ INSERT INTO studyPlan VALUES ( NULL );
         /*Networking and wireless communication*/
 INSERT INTO studyPlan VALUES ( NULL );
 INSERT INTO studyPlan VALUES ( NULL );
+
 
 /*SpecialityPlan*/
     /*Software deanary*/
@@ -107,40 +112,32 @@ INSERT INTO planSubject  VALUES ('pl-11', 'sub_12', 11, 11, 2, 0, 'P');
 INSERT INTO planSubject  VALUES ('pl-12', 'sub-9', 15, 15, 2, 0, 'P');
 
 
-
-
-
-     /*st_group*/
-                /*Database Foundations*/
-                /*Object Oriented Programming*/
-        INSERT INTO st_group  VALUES (NULL, 'pl_1');
-                 /*Web Based Technology*/
-                /*Alogrythms and Data Structures*/
-        INSERT INTO st_group  VALUES (NULL, 'pl_2');
-                /*Web Based Technology*/
-                /*Alogrythms and Data Structures*/
-        INSERT INTO st_group  VALUES (NULL, 'pl_3');
-                /*Network Administration*/
-        INSERT INTO st_group  VALUES (NULL, 'pl_4');
-                /*Network Administration*/
-                /*Algebra*/
-        INSERT INTO st_group  VALUES (NULL, 'pl_5');
-                /*Descrete Mathematicas*/
-                /*MicroContoller Programming*/
-        INSERT INTO st_group  VALUES (NULL, 'pl_6');
-                /*Computer Architecture*/
-        INSERT INTO st_group  VALUES (NULL, 'pl_7');
-                /*C Programming*/
-        INSERT INTO st_group  VALUES (NULL, 'pl_8');
-                /*C Programming*/
-        INSERT INTO st_group  VALUES (NULL, 'pl_9');
-                /*Computer Systems Engineering*/
-        INSERT INTO st_group  VALUES (NULL, 'pl_10');
-                /*Computer Systems Engineering*/
-        INSERT INTO st_group  VALUES (NULL, 'pl_11');
-                /*MicroContoller Programming*/
-        INSERT INTO st_group  VALUES (NULL, 'pl_12');
-
+/*st_group*/
+/*In comments subjects for this group*/
+    /*Database Foundations, Object Oriented Programming*/
+INSERT INTO st_group  VALUES (NULL, 'pl_1');
+    /*Web Based Technology, Alogrythms and Data Structures*/
+INSERT INTO st_group  VALUES (NULL, 'pl_2');
+    /*Web Based Technology, Alogrythms and Data Structures*/
+INSERT INTO st_group  VALUES (NULL, 'pl_3');
+    /*Network Administration*/
+INSERT INTO st_group  VALUES (NULL, 'pl_4');
+    /*Network Administration, Algebra*/
+INSERT INTO st_group  VALUES (NULL, 'pl_5');
+    /*Descrete Mathematicas, MicroContoller Programming*/
+INSERT INTO st_group  VALUES (NULL, 'pl_6');
+    /*Computer Architecture*/
+INSERT INTO st_group  VALUES (NULL, 'pl_7');
+    /*C Programming*/
+INSERT INTO st_group  VALUES (NULL, 'pl_8');
+    /*C Programming*/
+INSERT INTO st_group  VALUES (NULL, 'pl_9');
+    /*Computer Systems Engineering*/
+INSERT INTO st_group  VALUES (NULL, 'pl_10');
+    /*Computer Systems Engineering*/
+INSERT INTO st_group  VALUES (NULL, 'pl_11');
+    /*MicroContoller Programming*/
+INSERT INTO st_group  VALUES (NULL, 'pl_12');
 
 
 

@@ -1,3 +1,4 @@
+/*In this sequence for correct droping*/
 DROP TABLE subject_student;
 DROP TABLE specialityPlan;
 DROP TABLE planSubject;
