@@ -25,7 +25,7 @@ INSERT INTO studyPlan VALUES ( NULL );
         /*Programming*/
 INSERT INTO studyPlan VALUES ( NULL );
 INSERT INTO studyPlan VALUES ( NULL );
-    /*Hardsware deanary*/
+    /*Hardware deanary*/
         /*Computer architecture*/
 INSERT INTO studyPlan VALUES ( NULL );
 INSERT INTO studyPlan VALUES ( NULL );
@@ -61,4 +61,20 @@ INSERT INTO specialityPlan VALUES (spe_5, pl_9);
 INSERT INTO specialityPlan VALUES (spe_5, pl_10);        
         /*Networking and wireless communication*/
 INSERT INTO specialityPlan VALUES (spe_6, pl_11); 
-INSERT INTO specialityPlan VALUES (spe_6, pl_12);               
+INSERT INTO specialityPlan VALUES (spe_6, pl_12);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

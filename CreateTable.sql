@@ -26,12 +26,10 @@ codeSpe   VARCHAR (6)     CONSTRAINT fk_speciality         REFERENCES speciality
 codePlan  VARCHAR (6)     CONSTRAINT fk_studyPlan          REFERENCES studyPlan
 );
 
-CREATE TABLE subject_student 
-(
-codeSub   VARCHAR(6)  CONSTRAINT fk_subject REFERENCES subject,
-dniStud   VARCHAR(6)  CONSTRAINT fk_student REFERENCES student,
-grade     NUMBER(2,1) 
-);
+        CREATE TABLE st_group (
+            code VARCHAR(6) CONSTRAINT pk_st_group PRIMARY KEY,
+            codePlan VARCHAR(6)  CONSTRAINT fk_codePlan REFERENCES studyPlan  --CODE OF A STUDY PLAN
+        );
 
         CREATE  TABLE student (
            dni VARCHAR(6) CONSTRAINT pk_student  PRIMARY KEY,
@@ -42,11 +40,21 @@ grade     NUMBER(2,1)
            email VARCHAR(30) NOT NULL,
            phone VARCHAR(15) NOT NULL,
            yearOfStudy NUMBER(1) NOT NULL );
+         
+CREATE TABLE subject (
+code      VARCHAR(6)        CONSTRAINT pk_subject       PRIMARY KEY,
+title     VARCHAR(50),
+credits   NUMBER(2) 
+);
            
-        CREATE TABLE st_group (
-            code VARCHAR(6) CONSTRAINT pk_st_group PRIMARY KEY,
-            codePlan VARCHAR(6)  CONSTRAINT fk_codePlan REFERENCES studyPlan  --CODE OF A STUDY PLAN
-        );
+CREATE TABLE subject_student 
+(
+codeSub   VARCHAR(6)  CONSTRAINT fk_subject REFERENCES subject,
+dniStud   VARCHAR(6)  CONSTRAINT fk_student REFERENCES student,
+grade     NUMBER(2,1) 
+);           
+           
+
 
         CREATE TABLE planSubject (
             codePlan    VARCHAR(6) CONSTRAINT fk_code_plan REFERENCES studyPlan ,
@@ -59,13 +67,10 @@ grade     NUMBER(2,1)
             
         );
 
-CREATE TABLE subject (
-code      VARCHAR(6)        CONSTRAINT pk_subject       PRIMARY KEY,
-title     VARCHAR(50),
-credits   NUMBER(2) 
-);
+
     
     --create triggers for primary keys
+    /*if you ones create a SEQUENCE, please, don't try to create them again - it will make a problem. Just comment them after using*/
     CREATE SEQUENCE dni_auto_id start with 1;
     CREATE OR REPLACE TRIGGER add_auto_to_dni BEFORE INSERT ON student FOR EACH ROW  BEGIN  SELECT 'st_' || dni_auto_id.NEXTVAL INTO :NEW.dni FROM dual; END; 
 
