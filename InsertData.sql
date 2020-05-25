@@ -141,7 +141,34 @@ INSERT INTO st_group  VALUES (NULL, 'pl_12');
 
 
 
-
+INSERT INTO student VALUES (NULL ,'gr-1', 'Barbara-Anne', 'Hoodless', '619 Kedzie CourtbMilltown Ireland, 49349-873', 'bhoodless0@theguardian.com', '+950-852-7200', 3); 
+INSERT INTO student VALUES (NULL ,'gr-1', 'Tetiana', 'Yaremko', '8a, av Andalucia 4, Jaen', 'tetianayaremko@gmail.com', '+480975400783', 2); 
+INSERT INTO student VALUES (NULL ,'gr-1', 'Yehor', 'Velikozon', '3a, av Andalucia 12, Jaen', 'yehor@gmail.com', '+38097883059', 2); 
+INSERT INTO student VALUES (NULL ,'gr-1', 'Pepita', 'Eland', '97210 Dayton Crossing Sámi Greece 67938-0858', 'peland1@bbb.org', '+30 836 824 4012', 3); 
+INSERT INTO student VALUES (NULL ,'gr-2', 'Cassi', 'Zanini', '1 Bultman Hill Tiyuguan China 55289-561', 'czanini2@washingtonpost.com', '+86 414 939 6324', 1); 
+INSERT INTO student VALUES (NULL ,'gr-2', 'Fara', 'Surgen',  '84 David Terrace Quilmes Argentina, 63868-201', 'fsurgen3@ustream.tv', '+54 576 932 2805', 1); 
+INSERT INTO student VALUES (NULL ,'gr-2', 'Barbara-Anne', 'Hoodless', '619 Kedzie CourtbMilltown Ireland, 49349-873', 'bhoodless0@theguardian.com', '+950-852-7200', 3); 
+INSERT INTO student VALUES (NULL ,'gr-2', 'Shaw', 'Napier', '72 Muir Road Şaqānis Tunisia 61727-333', 'snapier4@diigo.com', '+216 867 959 1399', 2); 
+INSERT INTO student VALUES (NULL ,'gr-5', 'Sibyl', 'Bukac', '2 Linden Avenue Jing’an China 49288-0801', 'sbukac5@examiner.com', '+86 559 446 8579', 1); 
+INSERT INTO student VALUES (NULL ,'gr-5', 'Reynold', 'Bleas', '936 Nelson Hill Banyo Cameroon 37000-704', 'rbleas6@google.co.uk', '+237 836 494 4150', 3); 
+INSERT INTO student VALUES (NULL ,'gr-5', 'Emlynne', 'Morton', '8088 Sunbrook Pass Ejmiatsin Armenia 75866-304', 'emorton7@economist.com', '+374 222 288 3652', 2); 
+INSERT INTO student VALUES (NULL ,'gr-5', 'Judy', 'Galley',  '208 Barby Lane Hudson Bay Canada 51672-1271', 'jgalley8@huffingtonpost.com', '+1 937 686 3850', 2);
+INSERT INTO student VALUES (NULL ,'gr-6', 'Leona', 'Chill', '7142 Iowa Crossing Nanfeng China 51532-5500', 'lchill9@people.com.cn', '+86 217 403 9044', 3); 
+INSERT INTO student VALUES (NULL ,'gr-6', 'Theresa', 'Procter', '7893 Sycamore Center Santa Cruz Philippines 43857-0028', 'tproctera@alexa.com', '+63 509 679 1672', 2); 
+INSERT INTO student VALUES (NULL ,'gr-6', 'Marijo', 'Wintersgill',  '923 Hermina Crossing Kruhlaye Belarus 65862-018', 'mwintersgillb@msn.com', '+375 725 518 9354', 2); 
+INSERT INTO student VALUES (NULL ,'gr-6', 'Mil', 'Du Hamel', '12 Glacier Hill Point Rubiataba Brazil 10191-1829', 'mduhamelc@sbwire.com', '+55 633 531 4503', 3); 
+INSERT INTO student VALUES (NULL ,'gr-7', 'Edy', 'Domel', '8995 Steensland Park Perna Finland 32909-723', 'edomeld@dailymail.co.uk', '+358 463 769 6008', 2); 
+INSERT INTO student VALUES (NULL ,'gr-7', 'Stephie', 'Kaine',  '4311 Delaware Park Sakai Japan 45782-0000', 'skainee@amazon.de', '+81 230 171 4707', 2); 
+INSERT INTO student VALUES (NULL ,'gr-7', 'Liv', 'Billany', '73441 Twin Pines Avenue Yermolayevo Russia 67457-425', 'lbillanyf@toplist.cz', '+7 203 697 2163', 3); 
+INSERT INTO student VALUES (NULL ,'gr-7', 'Bancroft', 'Jandourek', '643 Tomscot Crossing Lyon France 54868-6361', 'bjandourekg@washington.edu', '+33 997 321 6176', 2); 
+INSERT INTO student VALUES (NULL ,'gr-8', 'Daveen', 'Maxsted', '1 Linden Point Alepou Greece 36987-2473', 'dmaxstedh@i2i.jp', '+30 513 177 8975', 2); 
+INSERT INTO student VALUES (NULL ,'gr-8', 'Darbie', 'De Mitris', '486 East Hill Pesqueira Brazil 61703-303', 'ddemitrisi@bing.com', '+55 275 843 8057', 3); 
+INSERT INTO student VALUES (NULL ,'gr-8', 'Maura', 'Figure', '09 Kedzie Circle Shimeitang China 0603-1481', 'mfigurej@census.gov', '+86 854 275 9891', 2); 
+INSERT INTO student VALUES (NULL ,'gr-8', 'Clio', 'Exley',  '25602 Summit Crossing Dindima Nigeria 33261-819', 'cexleyk@ca.gov', '+1 937 686 3850', 2);
+INSERT INTO student VALUES (NULL ,'gr-9', 'Augy', 'Aird', '0 Oneill Avenue Grzęska Poland 64942-1259', 'aairdl@pinterest.com', '+48 145 408 2058', 3); 
+INSERT INTO student VALUES (NULL ,'gr-9', 'Erv', 'Booker', '80 Cody Trail Yangi-Nishon Shahri Uzbekistan 62175-310', 'ebookerm@artisteer.com', '+998 569 235 0413', 2); 
+INSERT INTO student VALUES (NULL ,'gr-9', 'Lemmy', 'Mattaus', '981 Forest Run Park Palmitas Uruguay 13537-467', 'lmattausn@gnu.org', '+598 761 760 6688', 2); 
+INSERT INTO student VALUES (NULL ,'gr-9', 'Nata', 'Blasoni', '549 Spohn Point Zaječov Czech Republic 33342-019', 'nblasonio@facebook.com', '+420 405 495 1870', 3); 
 
 
 
