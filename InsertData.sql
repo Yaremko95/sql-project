@@ -16,3 +16,28 @@ INSERT INTO speciality  VALUES ( NULL, 'de_25','Distributed systems');
     /*Security deanary*/
 INSERT INTO speciality  VALUES ( NULL, 'de_26','Security');
 INSERT INTO speciality  VALUES ( NULL, 'de_26' ,'Networking and wireless communication');
+
+/*StudyPlan*/
+    /*Software deanary*/
+        /*Graphics and human-computer interaction*/
+INSERT INTO studyPlan VALUES ( NULL );
+INSERT INTO studyPlan VALUES ( NULL );
+        /*Programming*/
+INSERT INTO studyPlan VALUES ( NULL );
+INSERT INTO studyPlan VALUES ( NULL );
+    /*Hardsware deanary*/
+        /*Computer architecture*/
+INSERT INTO studyPlan VALUES ( NULL );
+INSERT INTO studyPlan VALUES ( NULL );
+        /*Distributed systems*/
+INSERT INTO studyPlan VALUES ( NULL );
+INSERT INTO studyPlan VALUES ( NULL );
+    /*Security deanary*/
+        /*Security*/
+INSERT INTO studyPlan VALUES ( NULL );
+INSERT INTO studyPlan VALUES ( NULL );
+        /*Networking and wireless communication*/
+INSERT INTO studyPlan VALUES ( NULL );
+INSERT INTO studyPlan VALUES ( NULL );
+
+        
