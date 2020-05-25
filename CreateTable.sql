@@ -26,14 +26,15 @@ codeSpe   VARCHAR (6)     CONSTRAINT fk_speciality         REFERENCES speciality
 codePlan  VARCHAR (6)     CONSTRAINT fk_studyPlan          REFERENCES studyPlan
 );
 
- CREATE TABLE subject_student (
-codeSub   VARCHAR(6) ,
-dniStud   VARCHAR(6),
+CREATE TABLE subject_student 
+(
+codeSub   VARCHAR(6)  CONSTRAINT fk_subject REFERENCES subject,
+dniStud   VARCHAR(6)  CONSTRAINT fk_student REFERENCES student,
 grade     NUMBER(2,1) 
 );
 
         CREATE  TABLE student (
-           dni VARCHAR(6) CONSTRAINT pk_dni  PRIMARY KEY,
+           dni VARCHAR(6) CONSTRAINT pk_student  PRIMARY KEY,
            codeGroup VARCHAR(6)  CONSTRAINT fk_codeGroup REFERENCES st_group,
            nameSt VARCHAR(50) NOT NULL,
            surname VARCHAR(50) NOT NULL,
@@ -43,7 +44,7 @@ grade     NUMBER(2,1)
            yearOfStudy NUMBER(1) NOT NULL );
            
         CREATE TABLE st_group (
-            code VARCHAR(6) CONSTRAINT pk_code PRIMARY KEY,
+            code VARCHAR(6) CONSTRAINT pk_st_group PRIMARY KEY,
             codePlan VARCHAR(6)  CONSTRAINT fk_codePlan REFERENCES studyPlan  --CODE OF A STUDY PLAN
         );
 
@@ -59,7 +60,7 @@ grade     NUMBER(2,1)
         );
 
 CREATE TABLE subject (
-code      VARCHAR(6)        CONSTRAINT pk_sub_code        PRIMARY KEY,
+code      VARCHAR(6)        CONSTRAINT pk_subject       PRIMARY KEY,
 title     VARCHAR(50),
 credits   NUMBER(2) 
 );
