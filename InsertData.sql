@@ -1,24 +1,18 @@
-/*Department*/
-INSERT INTO department VALUES ( ,'Computer Science and Technology');
+/*department*/
+INSERT INTO department VALUES (NULL ,'Computer Science and Technology');
 
 /*Deanary*/
-INSERT INTO deanary  VALUES ( , ,'Software engineering');
-INSERT INTO deanary  VALUES ( , ,'Hardware engineering');
-INSERT INTO deanary  VALUES ( , ,'Computer security');
+INSERT INTO deanary  VALUES (NULL , 'dep_1' ,'Software engineering');
+INSERT INTO deanary  VALUES (NULL ,'dep_1' ,'Hardware engineering');
+INSERT INTO deanary  VALUES (NULL ,'dep_1' ,'Computer security');
 
 /*Speciality*/
     /*Software deanary*/
-INSERT INTO speciality  VALUES ( , ,'Graphics and human-computer interaction');
-INSERT INTO speciality  VALUES ( , ,'Programming');
+INSERT INTO speciality  VALUES (NULL , 'de_24','Graphics and human-computer interaction');
+INSERT INTO speciality  VALUES (NULL ,'de_24' ,'Programming');
     /*Hardsware deanary*/
-INSERT INTO speciality  VALUES ( , ,'Computer architecture');
-INSERT INTO speciality  VALUES ( , ,'Distributed systems');
+INSERT INTO speciality  VALUES (NULL ,'de_25' ,'Computer architecture');
+INSERT INTO speciality  VALUES ( NULL, 'de_25','Distributed systems');
     /*Security deanary*/
-INSERT INTO speciality  VALUES ( , ,'Security');
-INSERT INTO speciality  VALUES ( , ,'Networking and wireless communication');
-
-/*Study Plan*/
-INSERT INTO studyPlan VALUES ( );
-
-/*SpecialityPlan*/
-INSERT INTO SpecialityPlan VALUES ( , ,);
+INSERT INTO speciality  VALUES ( NULL, 'de_26','Security');
+INSERT INTO speciality  VALUES ( NULL, 'de_26' ,'Networking and wireless communication');

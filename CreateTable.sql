@@ -86,13 +86,13 @@ credits   NUMBER(2)
     CREATE SEQUENCE deanary_code_auto start with 1;
     CREATE OR REPLACE TRIGGER add_auto_to_deanary_code 
         BEFORE INSERT ON deanary FOR EACH ROW BEGIN 
-        SELECT 'dean_' || deanary_code_auto.NEXTVAL INTO :NEW.code FROM dual;
+        SELECT 'd_' || deanary_code_auto.NEXTVAL INTO :NEW.code FROM dual;
         END;
 
     CREATE SEQUENCE speciality_code_auto start with 1;
     CREATE OR REPLACE TRIGGER add_auto_to_speciality_code 
         BEFORE INSERT ON speciality FOR EACH ROW BEGIN 
-        SELECT 'spec_' || speciality_code_auto.NEXTVAL INTO :NEW.code FROM dual;
+        SELECT 'spe_' || speciality_code_auto.NEXTVAL INTO :NEW.code FROM dual;
         END;
 
     CREATE SEQUENCE study_plan_code_auto start with 1;
