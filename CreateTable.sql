@@ -65,7 +65,7 @@ kindExam        VARCHAR (1)     CONSTRAINT ck_kindExam_studyPlan   CHECK ( kindE
 
     
     --create triggers for primary keys
-    /*if you ones create a SEQUENCE, please, don't try to create them again - it will make a problem. Just compile file Triggers.sql*/
+   
     
     /*st_ - student*/
     CREATE SEQUENCE dni_auto_id start with 1;
