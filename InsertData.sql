@@ -8,15 +8,14 @@ INSERT INTO deanary  VALUES (NULL ,'dep_1' ,'Computer security');
 
 /*Speciality*/
     /*Software deanary*/
-INSERT INTO speciality  VALUES (NULL , 'de_24','Graphics and human-computer interaction');
-INSERT INTO speciality  VALUES (NULL ,'de_24' ,'Programming');
+INSERT INTO speciality  VALUES (NULL , 'd_1','Graphics and human-computer interaction');
+INSERT INTO speciality  VALUES (NULL ,'d_1' ,'Programming');
     /*Hardsware deanary*/
-INSERT INTO speciality  VALUES (NULL ,'de_25' ,'Computer architecture');
-INSERT INTO speciality  VALUES ( NULL, 'de_25','Distributed systems');
+INSERT INTO speciality  VALUES (NULL ,'d_2' ,'Computer architecture');
+INSERT INTO speciality  VALUES ( NULL, 'd_2','Distributed systems');
     /*Security deanary*/
-INSERT INTO speciality  VALUES ( NULL, 'de_26','Security');
-INSERT INTO speciality  VALUES ( NULL, 'de_26' ,'Networking and wireless communication');
-
+INSERT INTO speciality  VALUES ( NULL, 'd_3','Security');
+INSERT INTO speciality  VALUES ( NULL, 'd_3' ,'Networking and wireless communication');
 /*StudyPlan*/
     /*Software deanary*/
         /*Graphics and human-computer interaction*/
@@ -79,23 +78,36 @@ INSERT INTO subject  VALUES (NULL ,'C Programming', 5);
 INSERT INTO subject  VALUES (NULL ,'Computer Systems Engineering', 5);
 
 
+
 /*planSubject*/
+    /*Software deanary*/
+        /*Graphics and human-computer interaction*/
 INSERT INTO planSubject  VALUES ('pl-1', 'sub_1', 30, 15, 0, 8, 'T');
 INSERT INTO planSubject  VALUES ('pl-1', 'sub_2', 14, 29, 2, 4, 'P');
 INSERT INTO planSubject  VALUES ('pl-2', 'sub_3', 25, 18, 8, 3, 'T');
+INSERT INTO planSubject  VALUES ('pl-2', 'sub_4', 20, 10, 2, 0, 'P');
+        /*Programming*/
 INSERT INTO planSubject  VALUES ('pl-3', 'sub_5', 22, 13, 2, 0, 'P');
 INSERT INTO planSubject  VALUES ('pl-4', 'sub-6', 10, 15, 0, 2, 'P');
-INSERT INTO planSubject  VALUES ('pl-2', 'sub_4', 20, 10, 2, 0, 'P');
+    /*Hardsware deanary*/
+        /*Computer architecture*/
 INSERT INTO planSubject  VALUES ('pl-5', 'sub_5', 10, 10, 0, 3, 'T');
 INSERT INTO planSubject  VALUES ('pl-5', 'sub_7', 12, 14, 0, 5, 'P');
 INSERT INTO planSubject  VALUES ('pl-6', 'sub_8', 21, 19, 3, 7, 'T');
 INSERT INTO planSubject  VALUES ('pl-6', 'sub_9', 22, 13, 2, 0, 'T');
+        /*Distributed systems*/
 INSERT INTO planSubject  VALUES ('pl-7', 'sub-10', 10, 15, 0, 2, 'P');
 INSERT INTO planSubject  VALUES ('pl-8', 'sub_11', 20, 10, 2, 8, 'P');
+    /*Security deanary*/
+        /*Security*/
 INSERT INTO planSubject  VALUES ('pl-9', 'sub_11', 14, 9, 0, 0, 'T');
 INSERT INTO planSubject  VALUES ('pl-10', 'sub-12', 18, 14, 0, 1, 'P');
+        /*Networking and wireless communication*/
 INSERT INTO planSubject  VALUES ('pl-11', 'sub_12', 11, 11, 2, 0, 'P');
 INSERT INTO planSubject  VALUES ('pl-12', 'sub-9', 15, 15, 2, 0, 'P');
+
+
+
 
 
      /*st_group*/
