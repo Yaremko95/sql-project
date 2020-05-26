@@ -26,6 +26,7 @@ SELECT MAX(avg)  FROM
     GROUP BY codeGroup
     ORDER BY codeGroup ;
 
+
 /*gets list of subjects which are taught on more than one speciality*/  
 SELECT s.title FROM subject s 
 WHERE s.code IN 
@@ -33,3 +34,11 @@ WHERE s.code IN
             WHERE sp.codePlan=ps.codePlan 
             GROUP BY ( ps.codeSub ) 
             HAVING COUNT (ps.codeSub) >1);
+
+/*gets list of groups where all students are of the same year of study */            
+SELECT codeGroup FROM 
+            (SELECT DISTINCT yearOfStudy, codeGroup, COUNT(codeGroup) 
+            FROM student 
+            GROUP BY (codeGroup, yearOfStudy )) 
+GROUP BY codeGroup 
+HAVING cOUNT (codeGroup)=1;
