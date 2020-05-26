@@ -60,3 +60,11 @@ SELECT A.codeSub, B.codeSub, A.total_hours FROM (SELECT codeSub, hoursLecture+ho
     ON A.total_hours=B.total_hours
     WHERE A.total_hours=B.total_hours 
     AND A.codeSub<B.codeSub ;
+
+/*gets students who didn't pass thory exam (their grade is less then 5)*/
+SELECT dni, nameSt, surname from student s where exists ( 
+        SELECT dniStud  FROM subject_student ss 
+                                WHERE s.dni=ss.dniStud AND codeSub NOT IN(
+                                                    SELECT codeSub 
+                                                    FROM planSubject 
+                                                    WHERE kindExam='P') and grade < 5);
