@@ -1,5 +1,10 @@
 /*Views*/
-
+SELECT nameSt, surname, nameSpe FROM student st, st_group sg, specialityPlan sp, speciality s  WHERE st.codeGroup = sg.code
+                                                                                               AND sg.codePlan = sp.codePlan
+                                                                                               AND sp.codeSpe = s.code
+                                                                                               AND dni IN (SELECT dniStud FROM student WHERE dniStud IN (SELECT dniStud FROM subject_student WHERE dniStud = st.dni
+                                                                                                                                                                    GROUP BY dniStud
+                                                                                                                                                                    HAVING MAX(AVG(grade)) IN (SELECT MAX(AVG(grade))FROM subject_student GROUP BY dniStud)));
 
 /*Select*/
     /*Select all info about studients, who taking subjects, that insist only in one study plan (unique suject, in other words)*/
@@ -43,8 +48,7 @@ AND hoursCourseWork = 0;
 UPDATE subject_student
 SET grade = 0
 WHERE grade < 5
-AND dniStud IN (SELECT dni FROM student WHERE codeGroup = (SELECT code FROM st_group WHERE codeSpe = 'spe_6'));
-    /*Update planSubject where kindExam != 'T' and avareg mark of all students on this speciality is > 5.5. IF so, we set kindExam as 'T'*/
+AND dniStud IN (SELECT dni FROM student WHERE codeGroup IN (SELECT code FROM st_group WHERE codePlan IN (SELECT codePlan FROM specialityPlan WHERE codeSpe ='spe_6')));
     /*Update planSubject where kindExam != 'T' and avareg mark of all students on this speciality is > 5.5. IF so, we set kindExam as 'T'*/
 Update planSubject ps
 SET kindExam = 'T'
@@ -63,7 +67,7 @@ AND codeSub IN (SELECT codeSub FROM planSubject WHERE kindExam = 'P'
                                                                                  WHERE code IN (SELECT codeGroup FROM student WHERE dni = ss.dniStud)));
     /*Delete students who don't exist in subject_student and from group 1 till 9 (frist, second.. ninth)*/
 DELETE FROM student s
-WHERE dni IN (SELECT dniStud FROM subject_student WHERE NOT EXISTS (s.dni))
+WHERE dni IN (SELECT dniStud FROM subject_student WHERE NOT EXISTS (SELECT dni FROM student WHERE dni = s.dni))
 AND codeGroup LIKE 'gr__';
 
     /*Delete from planSubject if avg grade all students of this subject is < 3 OR it doesn't exist in subject_student*/
