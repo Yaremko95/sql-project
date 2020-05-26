@@ -211,3 +211,9 @@ INSERT INTO student VALUES (NULL ,'gr_12', 'Willard', 'Tong',  '7358 Weeping Bir
 INSERT INTO student VALUES (NULL ,'gr_12', 'Tiphanie', 'Lackeye', '05 Dorton Road', 'tlackeyev@instagram.com', '+86 148 606 3116', 3);
 INSERT INTO student VALUES (NULL ,'gr_12', 'Everard', 'Sille', '726 Melody Avenue', 'esilleu@microsoft.com', '+86 873 779 0214', 3);
 
+
+/*subject_student*/
+/*inserts data into subject_students using subquery and generating a random grade*/
+INSERT INTO  subject_student (codeSub, dniStud, grade) SELECT ps.codeSub, s.dni, DBMS_RANDOM.VALUE (0, 10)
+ FROM planSubject ps, student s WHERE ps.codePlan=
+        (SELECT codePlan FROM st_group g WHERE g.code = s.codeGroup);
