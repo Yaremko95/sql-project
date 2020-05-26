@@ -7,10 +7,10 @@ INSERT INTO  subject_student (codeSub, dniStud, grade) SELECT ps.codeSub, s.dni,
 /*gets students who study on speciality ''spe_2*/
 SELECT dni FROM student 
 WHERE codeGroup IN (
-                SELECT code FROM st_group
-                WHERE codeplan  IN(
-                            SELECT codePlan FROM specialityPlan 
-                            WHERE codeSpe='spe_2'));
+                SELECT code FROM st_group g
+                WHERE EXISTS(
+                            SELECT codePlan FROM specialityPlan sp
+                            WHERE g.codeplan=sp.codePlan and codeSpe='spe_2'));
 /*gets student's highest average grade for practice exams*/
 SELECT MAX(avg)  FROM 
                     (SELECT dniStud, SUM(grade)/COUNT(dniStud) AS avg 
