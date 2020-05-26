@@ -52,3 +52,11 @@ SELECT codeGroup FROM
             GROUP BY (codeGroup, yearOfStudy )) 
 GROUP BY codeGroup 
 HAVING cOUNT (codeGroup)=1;
+
+/*gets pairs of subjects with equel total hours*/
+SELECT A.codeSub, B.codeSub, A.total_hours FROM (SELECT codeSub, hoursLecture+hoursPractice+hoursLabClasses+hoursCourseWork AS total_hours  FROM planSubject) A 
+    JOIN 
+    (SELECT codeSub, hoursLecture+hoursPractice+hoursLabClasses+hoursCourseWork AS total_hours FROM planSubject) B 
+    ON A.total_hours=B.total_hours
+    WHERE A.total_hours=B.total_hours 
+    AND A.codeSub<B.codeSub ;
