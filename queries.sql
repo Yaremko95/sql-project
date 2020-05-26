@@ -4,9 +4,16 @@ INSERT INTO  subject_student (codeSub, dniStud, grade) SELECT ps.codeSub, s.dni,
  FROM planSubject ps, student s WHERE ps.codePlan=
         (SELECT codePlan FROM st_group g WHERE g.code = s.codeGroup);
 
+/*inserts into speciality same sapecialities which belong to d_2'*/
+    INSERT INTO speciality (code, codeDea, nameSpe) SELECT NULL, 'd_2', nameSpe FROM speciality WHERE codeDea='d_3';
+
+
+/*inserts into PlanSubject 'pl_1' same subjects as in 'pl_2'*/
+ INSERT INTO planSubject SELECT 'pl_1', codeSub, hoursLecture, hoursPractice, hoursLabClasses, hoursCourseWork, kindExam    FROM planSubject WHERE codePlan='pl_2';
+
 /*groups students by year*/
  SELECT yearOfStudy, COUNT(dni) AS total FROM student GROUP BY yearOfStudy;
- 
+
 /*select average grade for every subject taken*/
 SELECT codeSub, AVG(grade) FROM subject_student GROUP BY (codeSub)
 
@@ -71,3 +78,5 @@ SELECT dni, nameSt, surname from student s where exists (
                                                     SELECT codeSub 
                                                     FROM planSubject 
                                                     WHERE kindExam='P') and grade < 5);
+
+
