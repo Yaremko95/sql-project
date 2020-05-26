@@ -54,7 +54,7 @@ INSERT INTO specialityPlan VALUES ('spe_2', 'pl_3');
 INSERT INTO specialityPlan VALUES ('spe_2', 'pl_4'); 
     /*Hardsware deanary*/
         /*Computer architecture*/    
-INSERT INTO specialityPlan VALUES ('spe_3', 'pl_5'); 
+INSERT INTO specialityPlan VALUES ('spe_3', 'pl_5');       
 INSERT INTO specialityPlan VALUES ('spe_3', 'pl_6');   
         /*Distributed systems*/
 INSERT INTO specialityPlan VALUES ('spe_4', 'pl_7'); 

@@ -25,3 +25,11 @@ SELECT MAX(avg)  FROM
                                                     WHERE kindExam='P')) 
     GROUP BY codeGroup
     ORDER BY codeGroup ;
+
+/*gets list of subjects which are taught on more than one speciality*/  
+SELECT s.title FROM subject s 
+WHERE s.code IN 
+            (SELECT  ps.codeSub FROM specialityPlan sp, planSubject ps 
+            WHERE sp.codePlan=ps.codePlan 
+            GROUP BY ( ps.codeSub ) 
+            HAVING COUNT (ps.codeSub) >1);
