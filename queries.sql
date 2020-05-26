@@ -17,6 +17,11 @@ INSERT INTO  subject_student (codeSub, dniStud, grade) SELECT ps.codeSub, s.dni,
 /*select average grade for every subject taken*/
 SELECT codeSub, AVG(grade) FROM subject_student GROUP BY (codeSub)
 
+/*updates table planSubject by modifying hoursLabClasses with max - 1 hour  only those which aren't equal to 0*/
+ UPDATE planSubject
+                SET hoursLabClasses = (SELECT (MAX(hoursLabClasses) - 1) FROM   planSubject WHERE hoursLabClasses>0 );
+
+
 /*gets students who study on speciality ''spe_2*/
 SELECT dni FROM student 
 WHERE codeGroup IN (
@@ -79,4 +84,6 @@ SELECT dni, nameSt, surname from student s where exists (
                                                     FROM planSubject 
                                                     WHERE kindExam='P') and grade < 5);
 
-
+/*deletes from student table those students who's grade is less then 1*/
+ DELETE FROM student WHERE dni IN ( SELECT dniStud  FROM subject_student ss 
+                                WHERE grade <1);
