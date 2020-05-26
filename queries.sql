@@ -4,6 +4,9 @@ INSERT INTO  subject_student (codeSub, dniStud, grade) SELECT ps.codeSub, s.dni,
  FROM planSubject ps, student s WHERE ps.codePlan=
         (SELECT codePlan FROM st_group g WHERE g.code = s.codeGroup);
 
+/*select average grade for every subject taken*/
+SELECT codeSub, AVG(grade) FROM subject_student GROUP BY (codeSub)
+
 /*gets students who study on speciality ''spe_2*/
 SELECT dni FROM student 
 WHERE codeGroup IN (
