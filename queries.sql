@@ -1,6 +1,7 @@
 /*Views*/
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     /*Best students of specialities*/
 CREATE VIEW bestSpeStu AS SELECT s.nameSt, s.surname, spe.namespe FROM student s, subject_student SuSt, 
                                                                        planSubject pS, specialityPlan sP, 
@@ -17,6 +18,17 @@ CREATE VIEW bestSpeStu AS SELECT s.nameSt, s.surname, spe.namespe FROM student s
 =======
 
 
+=======
+    /*Students with biggest avg grade*/
+SELECT nameSt, surname, nameSpe FROM student st, st_group sg, specialityPlan sp, speciality s  WHERE st.codeGroup = sg.code
+                                                                                               AND sg.codePlan = sp.codePlan
+                                                                                               AND sp.codeSpe = s.code
+                                                                                               AND dni IN (SELECT dniStud FROM subject_student WHERE st.dni = dniCode
+                                                                                                                                               GROUP BY dniStud
+                                                                                                                                               HAVING AVG(grade) >= (SELECT AVG(grade) FROM subject_student WHERE st.dni != dniCode
+                                                                                                                                                                                                           GROUP BY dniStud));
+    /**/                                                                                                                                                                                                       
+>>>>>>> Stashed changes
 /*Select*/
     /*Select all info about studients, who taking subjects, that insist only in one study plan (unique suject, in other words)*/
 SELECT * from student WHERE dni IN ( SELECT dniStud FROM subject_student s WHERE codeSub IN ( SELECT DISTINCT(codeSub) FROM planSubject GROUP BY codeSub
@@ -65,7 +77,7 @@ Update planSubject ps
 SET kindExam = 'T'
 WHERE kindExam != 'P'
 AND (SELECT AVG(grade) FROM subject_student 
-                       WHERE codSub IN (SELECT codSub FROM planSubject 
+                       WHERE codeSub IN (SELECT codeSub FROM planSubject 
                                                       WHERE codePlan IN (SELECT codePlan FROM specialityPlan 
                                                                                          WHERE codeSpe = ps.codeSpe))) > 5.5;
 
